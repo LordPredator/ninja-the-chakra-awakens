@@ -51,6 +51,83 @@ button{font:inherit;color:inherit}
 .notice{position:absolute;z-index:50;left:50%;bottom:calc(var(--safe-bottom) + 22px);transform:translateX(-50%);background:#090c11e8;border:1px solid #ffdc6b88;border-radius:10px;padding:9px 12px;font-size:12px;box-shadow:0 4px 12px #000a;max-width:85%;text-align:center}
 .forensic{font-size:12px;line-height:1.45}.forensic code{user-select:text;background:#0008;padding:2px 4px;border-radius:4px}.forensic pre{white-space:pre-wrap;user-select:text;background:#0008;padding:8px;border-radius:8px;font-size:10px}
 @media (min-width:700px){.home-actions{grid-template-columns:repeat(5,120px);justify-content:center}.roster{grid-template-columns:repeat(6,1fr)}.content{left:18px;right:18px}}
+
+/* === v0.6 visual overhaul === */
+.screen.v06 .content{top:calc(var(--safe-top) + 66px);bottom:calc(var(--safe-bottom) + 88px)}
+.brown-header{position:absolute;z-index:6;top:calc(var(--safe-top) + 2px);left:0;right:0;height:60px;background:linear-gradient(#b7752c,#92561f 45%,#7f4315);border-bottom:3px solid #d7a15b;box-shadow:0 4px 10px #0007;display:flex;align-items:center;justify-content:center;padding:0 68px;color:#fff6d2;text-shadow:0 2px 0 #5b2606,0 0 6px #000;font-weight:900;font-size:19px;letter-spacing:.02em}
+.brown-header .bh-back,.brown-header .bh-right{position:absolute;top:8px;width:44px;height:44px;border-radius:12px;border:2px solid #e9f2ff88;background:linear-gradient(#6fb3f1,#327cd7);display:grid;place-items:center;box-shadow:0 3px 8px #0007;color:#fff;font-size:22px;font-weight:900}
+.brown-header .bh-back{left:8px}.brown-header .bh-right{right:8px}
+.brown-header .bh-back:active,.brown-header .bh-right:active{transform:scale(.95)}
+.brown-header .bh-back img,.brown-header .bh-right img{width:100%;height:100%;object-fit:contain}
+.resource-strip{display:flex;align-items:center;gap:8px;background:linear-gradient(#9f6324,#774012);border:2px solid #d6a15e;border-radius:0 0 16px 16px;padding:8px 10px 10px;color:#fff7db;text-shadow:0 1px 0 #52290a,0 0 5px #000;box-shadow:0 4px 8px #0005}
+.resource-strip .energy{flex:1;display:flex;align-items:center;gap:8px}.resource-strip .energybar{flex:1;height:12px;background:#42240a;border-radius:999px;padding:2px;box-shadow:inset 0 2px 4px #0008}.resource-strip .energybar i{display:block;height:100%;border-radius:999px;background:linear-gradient(90deg,#ffe55b,#ffc72f)}
+.resource-strip .chapter-counter{font-weight:800}
+.bottom-nav{position:absolute;z-index:7;left:0;right:0;bottom:0;padding:8px 6px calc(var(--safe-bottom) + 8px);display:grid;grid-template-columns:repeat(6,1fr);gap:4px;background:linear-gradient(#b7752c,#8a4e1b);border-top:3px solid #d7a15b;box-shadow:0 -3px 12px #0007}
+.bottom-nav button{border:0;background:transparent;color:#fff7da;text-shadow:0 2px 0 #50210b,0 0 5px #000;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;gap:2px;padding:0 2px}
+.bottom-nav button img{width:44px;height:44px;object-fit:contain;filter:drop-shadow(0 2px 1px #0009)}
+.bottom-nav button span{font-size:11px;font-weight:900;line-height:1}
+.bottom-nav button.active span{color:#fff37b}
+.bottom-nav button.active img{transform:translateY(-2px) scale(1.06)}
+.home-screen.v06 .hero-panel{position:absolute;left:12px;right:12px;top:calc(var(--safe-top) + 70px);bottom:calc(var(--safe-bottom) + 110px);display:flex;flex-direction:column;justify-content:flex-end;padding:18px;background:linear-gradient(180deg,transparent 0,transparent 28%,rgba(0,0,0,.18) 46%,rgba(7,10,16,.74) 100%)}
+.home-screen.v06 .home-logo-big{width:min(62vw,290px);margin:0 auto auto;filter:drop-shadow(0 4px 4px #000a)}
+.home-screen.v06 .home-shortcuts{display:grid;grid-template-columns:1fr;gap:10px}
+.shortcut-card{display:flex;align-items:center;gap:12px;background:linear-gradient(#eef2ffdd,#cfd7f2d9);border:3px solid #aeb7d8;border-radius:18px;padding:10px 12px;color:#29304d;box-shadow:0 8px 18px #0006}.shortcut-card img{width:58px;height:58px;object-fit:contain}.shortcut-card h3{margin:0 0 2px;font-size:20px;color:#38415f;text-shadow:none}.shortcut-card p{margin:0;font-size:12px;color:#495269}
+.journey-list{display:grid;gap:10px}
+.chapter-row{position:relative;height:112px;border:3px solid #aab1d4;border-radius:18px;overflow:hidden;background:#8c93b1;color:#fff}.chapter-row img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}.chapter-row .row-shade{position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.15),rgba(0,0,0,.05) 25%,rgba(0,0,0,.5))}
+.chapter-row .chapter-text{position:absolute;left:14px;right:12px;bottom:8px;text-align:center;color:#fff;text-shadow:0 2px 0 #444,0 0 5px #000}
+.chapter-row .chapter-text b{display:block;font-size:18px;color:#ffe34a;margin-bottom:1px}.chapter-row .chapter-text span{display:block;font-size:15px;font-weight:900}
+.chapter-row .progress-pill{position:absolute;left:10px;right:10px;bottom:6px;height:18px;border-radius:999px;background:#d3d7eb;box-shadow:inset 0 2px 4px #0004}
+.chapter-row .progress-pill i{display:block;height:100%;border-radius:999px;background:linear-gradient(90deg,#c6ddff,#8cb6ff)}
+.chapter-row.locked{filter:grayscale(1)}.chapter-row.locked::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(0,0,0,.35),rgba(0,0,0,.35))}
+.chapter-row .chain{position:absolute;inset:0;display:none;align-items:center;justify-content:center;font-size:80px;opacity:.9;text-shadow:0 4px 0 #4a4a4a,0 0 8px #000}.chapter-row.locked .chain{display:flex}
+.chapter-row .go-arrow{position:absolute;right:10px;top:50%;transform:translateY(-50%);width:52px;height:52px;border-radius:50%;background:radial-gradient(circle at 35% 35%,#ffee84,#d1b800 58%,#6d6d00);border:3px solid #5d5d00;display:grid;place-items:center;color:#2f4d00;font-size:28px;font-weight:900;box-shadow:0 3px 10px #0008}
+.chapter-row.locked .go-arrow{display:none}
+.mission-card{background:linear-gradient(#edf0fb,#cdd5ee);border:3px solid #aab1d4;border-radius:18px;padding:12px;color:#39415c;box-shadow:0 6px 14px #0005}.mission-card h2{margin:0 0 8px;color:#3a4160;text-shadow:none}
+.mission-card .formation-grid{background:#bfc8e8}
+.original-btn,.big-gold{border:0;border-radius:14px;background:linear-gradient(#ffd84e,#e8a321);color:#fff8db;text-shadow:0 2px 0 #825100;box-shadow:inset 0 2px 0 #fff5a8,0 4px 10px #0006;padding:12px 14px;font-weight:900;font-size:18px}
+.team-screen{display:grid;gap:10px}
+.team-board{background:linear-gradient(#edf0fb,#cdd5ee);border:3px solid #aab1d4;border-radius:18px;padding:10px;color:#404767;box-shadow:0 6px 14px #0005}
+.team-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.team-grid .team-slot{position:relative;height:118px;border-radius:16px;background:linear-gradient(#7e86a9,#687094);border:3px solid #b9c0e0;overflow:hidden;box-shadow:inset 0 2px 0 #ffffff55}
+.team-grid .team-slot.empty{display:grid;place-items:center;color:#eceef9;font-style:italic;font-weight:900;font-size:20px}.team-grid .team-slot.active{outline:4px solid #ffdb5a;transform:translateY(-2px)}
+.team-grid .team-slot img{width:100%;height:100%;object-fit:cover;object-position:center top}.team-grid .team-slot .lv{position:absolute;left:4px;bottom:2px;background:#0008;border-radius:8px;padding:2px 6px;font-size:12px;font-weight:900}.team-grid .team-slot .rolechip{position:absolute;right:5px;bottom:5px;width:18px;height:18px;border-radius:50%;background:radial-gradient(circle,#ffd56f,#ae630f);border:1px solid #fff6}
+.team-info{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-top:10px;padding:8px 10px;border-radius:14px;background:#aeb7d8;color:#36415d;font-weight:800}
+.team-actions-row{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:10px}.team-actions-row .btn-soft{border:0;border-radius:14px;padding:12px;background:linear-gradient(#8f97b8,#767e9f);color:#fff;font-weight:900;text-shadow:0 2px 0 #454d6a;box-shadow:inset 0 2px 0 #ffffff33,0 4px 10px #0004}
+.profile-card{background:linear-gradient(#efe2bf,#d0b17a);border:3px solid #a67535;border-radius:18px;padding:10px;color:#4b2a08;box-shadow:0 6px 14px #0005}
+.profile-tabs{display:flex;gap:6px;margin-bottom:10px}.profile-tabs span{flex:1;text-align:center;padding:10px 8px;border-radius:12px;background:linear-gradient(#d69b52,#b56f23);color:#fff8d8;font-weight:900;text-shadow:0 2px 0 #6a3607}.profile-tabs .active{background:linear-gradient(#f7d14e,#f0b42a)}
+.profile-main{display:grid;grid-template-columns:110px 1fr;gap:10px;align-items:start}.profile-portrait{height:150px;border-radius:14px;background:linear-gradient(#dde4f8,#c5cee7);border:3px solid #b0b7d8;overflow:hidden}.profile-portrait img{width:100%;height:100%;object-fit:cover;object-position:center top}
+.profile-meta h3{margin:0 0 6px;font-size:26px;color:#5c3308}.stars{letter-spacing:2px;color:#ffcb31;text-shadow:0 1px 0 #7f4b00}.skill-box{margin-top:8px;background:#8a5625;border-radius:10px;padding:8px;color:#fff4d3}.skill-box h4{margin:0 0 4px;font-size:18px;color:#ffec7b}
+.stat-grid{display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-top:10px}.stat-grid .stat{display:flex;justify-content:space-between;gap:10px;background:#f2e9d2;border-radius:10px;padding:6px 8px;font-weight:800}
+.equip-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:10px}.equip-slot{aspect-ratio:1;border-radius:14px;border:3px solid #7e86a9;background:linear-gradient(#2d354d,#171d2d);display:grid;place-items:center;color:#f0c64f;font-size:26px;box-shadow:inset 0 2px 0 #ffffff22}
+.roster-panel{background:linear-gradient(#edf0fb,#cdd5ee);border:3px solid #aab1d4;border-radius:18px;padding:10px;box-shadow:0 6px 14px #0005}.roster-title{font-size:20px;font-weight:900;color:#39415f;margin-bottom:8px}
+.roster{grid-template-columns:repeat(4,1fr);gap:8px}.card{border:2px solid #aab1d4;background:linear-gradient(#fdfefe,#d8ddf3);border-radius:14px;overflow:hidden;color:#32415e;box-shadow:0 3px 8px #0002}.card.in-team{border-color:#f5ca3a}.card.active-roster{outline:3px solid #5ad9ff}.card img{width:100%;height:88px;object-fit:cover;object-position:center top}.card .tag{display:block;padding:6px 4px;font-size:11px;font-weight:900;text-align:center;background:#e8ecfb;text-shadow:none}
+.challenge-board{background:linear-gradient(#eef1fb,#d4dcf0);border:3px solid #aab1d4;border-radius:18px;padding:10px;box-shadow:0 6px 14px #0005}
+.survival-map{position:relative;height:490px;border-radius:18px;overflow:hidden;background:linear-gradient(135deg,#89bd6b,#55865c 35%,#4d7f93 36%,#75b2d7 60%,#4d88a8 100%)}
+.survival-map::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 14% 30%,#fff8 0 6%,transparent 7%),radial-gradient(circle at 20% 70%,#fff8 0 8%,transparent 9%),radial-gradient(circle at 72% 24%,#fff8 0 7%,transparent 8%),radial-gradient(circle at 80% 72%,#fff8 0 6%,transparent 7%),linear-gradient(115deg,transparent 0 18%,#73a16d 18% 28%,transparent 28% 100%),linear-gradient(12deg,transparent 0 63%,#6fb3d5 63% 73%,transparent 73% 100%);opacity:.45}
+.map-node{position:absolute;width:76px;height:76px;border-radius:16px;border:3px solid #4c5879;background:linear-gradient(#24314c,#101828);display:grid;place-items:center;color:#eac15a;font-size:38px;box-shadow:0 6px 14px #0006}.map-node.start{background:linear-gradient(#8749a5,#4d225f)}.map-node.treasure{background:linear-gradient(#6f2b72,#2b1131)}.map-dots{position:absolute;inset:0;pointer-events:none}
+.map-dots svg{width:100%;height:100%}.map-dots circle{fill:#ececec;stroke:#666;stroke-width:1}.map-dots path{fill:none;stroke:#d6d6d6;stroke-width:4;stroke-linecap:round;stroke-dasharray:2 12}
+.more-grid{display:grid;gap:10px}.more-card{background:linear-gradient(#edf0fb,#cdd5ee);border:3px solid #aab1d4;border-radius:18px;padding:12px;color:#39415f;box-shadow:0 6px 14px #0005}.more-card h3{margin:0 0 8px}
+.battle-screen.v06 .ui{background:linear-gradient(180deg,rgba(0,0,0,.08),rgba(0,0,0,.14))}
+.battle-top-counters{position:absolute;left:10px;top:calc(var(--safe-top) + 8px);display:flex;gap:10px;z-index:10}.battle-top-counters .battle-pill{display:flex;align-items:center;gap:6px;min-width:76px;background:rgba(115,115,115,.5);border-radius:16px;padding:6px 10px;color:#fff;font-weight:900;text-shadow:0 2px 2px #000;box-shadow:inset 0 1px 0 #ffffff55,0 3px 10px #0006}
+.battle-top-counters .icon{font-size:20px}.battle-side-stack{position:absolute;left:8px;bottom:calc(var(--safe-bottom) + 74px);display:flex;flex-direction:column;gap:10px;z-index:10}.battle-side-stack button{width:52px;height:52px;border-radius:50%;border:3px solid #d7d7d7;background:radial-gradient(circle at 35% 35%,#80c5ff,#2c78d4 65%);color:#fff;font-weight:1000;font-size:17px;box-shadow:0 4px 10px #0008;text-shadow:0 2px 0 #003e7b}.battle-side-stack button.speed{background:radial-gradient(circle at 35% 35%,#ffd965,#e8871b 65%);border-color:#f8efc4;color:#fff8dd;text-shadow:0 2px 0 #915000}
+.battle-round-tag{position:absolute;right:10px;bottom:calc(var(--safe-bottom) + 20px);z-index:10;font-size:24px;font-style:italic;font-weight:900;color:#fffbd8;text-shadow:0 2px 0 #6a6142,0 0 8px #000}
+.battle-stage{position:absolute;inset:0;z-index:2}
+.side-grid{position:absolute;inset:0}
+.fighter{position:absolute;width:118px;height:146px;border-radius:20px;border:3px solid #b6bfd8;background:linear-gradient(#868ead,#697195);overflow:visible;box-shadow:0 8px 18px #0008;display:block;transition:transform .18s ease, opacity .18s}
+.fighter .card-inner{position:absolute;inset:0;border-radius:17px;overflow:hidden;background:linear-gradient(#99a2c4,#616a8f)}
+.fighter .portrait{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center top}
+.fighter .frame-glow{position:absolute;inset:0;border-radius:17px;box-shadow:inset 0 0 0 3px rgba(255,255,255,.35), inset 0 0 18px rgba(255,255,255,.18)}
+.fighter .base-hp{position:absolute;left:8px;right:8px;bottom:8px;height:10px;border-radius:999px;background:#d72c22;box-shadow:0 1px 0 #fff6}.fighter .hpbar{position:absolute;left:0;top:0;bottom:0;border-radius:999px;background:linear-gradient(90deg,#3fe46b,#7eff43)}
+.fighter .nameplate{position:absolute;left:8px;right:8px;bottom:22px;font-size:11px;font-weight:900;text-align:center;color:#fff;text-shadow:0 2px 0 #333,0 0 6px #000;background:linear-gradient(#0004,#0002);border-radius:8px;padding:2px 4px}.fighter .element{position:absolute;right:8px;bottom:40px;width:18px;height:18px;border-radius:50%;background:radial-gradient(circle,#ffd56f,#ae630f);border:1px solid #fff8}
+.fighter.side-e{transform:scale(.92)}
+.fighter.pos1.side-e{left:50%;top:82px;transform:translateX(-50%) scale(1.02)}.fighter.pos2.side-e{left:42px;top:148px}.fighter.pos3.side-e{right:42px;top:148px}.fighter.pos4.side-e{left:22px;top:56px;opacity:.92}.fighter.pos5.side-e{right:22px;top:56px;opacity:.92}.fighter.pos6.side-e{left:50%;top:20px;transform:translateX(-50%) scale(.88);opacity:.86}
+.fighter.pos1.side-p{left:50%;bottom:178px;transform:translateX(-50%)}.fighter.pos2.side-p{left:38px;bottom:186px}.fighter.pos3.side-p{right:38px;bottom:186px}.fighter.pos4.side-p{left:38px;bottom:24px}.fighter.pos5.side-p{left:50%;bottom:24px;transform:translateX(-50%)}.fighter.pos6.side-p{right:38px;bottom:24px}
+.fighter.dead{opacity:.18;filter:grayscale(1)}
+.fighter.attacking.side-p{transform:translateY(-18px) scale(1.07)}.fighter.attacking.side-e{transform:translateY(16px) scale(1.02)}
+.damage{font-size:30px}.damage.crit{font-size:40px}.flash{width:150px;height:150px}.battle-message{font-size:42px}
+.result-card{background:linear-gradient(#f7ecd0,#d7b06c);border-color:#aa742e;color:#4e2b09}.result h2{color:#7e2a18;text-shadow:none}
+@media (max-width:430px){.fighter{width:102px;height:128px}.fighter.pos2.side-p,.fighter.pos4.side-p{left:18px}.fighter.pos3.side-p,.fighter.pos6.side-p{right:18px}.fighter.pos2.side-e{left:18px}.fighter.pos3.side-e{right:18px}.fighter.pos4.side-e{left:8px}.fighter.pos5.side-e{right:8px}.battle-round-tag{font-size:21px}.bottom-nav button img{width:40px;height:40px}.roster{grid-template-columns:repeat(3,1fr)}}
+
 </style>
 </head>
 <body>
@@ -108,51 +185,145 @@ const RECOVERED={"battle":{"attacker":{"units":{"1":{"position":1,"side":0,"card
     return `<div class="topbar"><div class="avatar">${img(A(`chars/${lead.id}.png`))}</div><div class="player"><strong>Iago · Nv. ${state.level}</strong><div class="xp"><i style="width:${clamp(state.xp%100,0,100)}%"></i></div></div><div class="currency"><span class="pill">🪙 ${state.coins}</span><span class="pill">💎 ${state.gold}</span><span class="pill">⚡ ${state.energy}</span></div></div>`
   }
 
+  
+  function navBar(active='home'){
+    const items=[
+      ['home','ui/btn_home.png','Home'],
+      ['campaign','ui/btn_campaign.png','Journey'],
+      ['challenge','ui/btn_arena.png','Challenge'],
+      ['formation','ui/btn_event_mission.png','Growth'],
+      ['growth','ui/btn_shop.png','Market'],
+      ['more','ui/btn_guild_gate.png','More']
+    ];
+    return `<nav class="bottom-nav">${items.map(([go,icon,label])=>`<button class="${active===go?'active':''}" data-nav="${go}">${img(A(icon))}<span>${label}</span></button>`).join('')}</nav>`;
+  }
+  function bindNav(){document.querySelectorAll('[data-nav]').forEach(b=>b.onclick=()=>{haptic();routes[b.dataset.nav]()})}
+  function brownHeader(title, backTo='home', extra=''){return `<div class="brown-header"><button class="bh-back" data-back="${backTo}">↩</button><div>${title}</div>${extra?`<div class="bh-right">${extra}</div>`:''}</div>`}
+  function bindBrownHeader(defaultBack=home){const back=document.querySelector('[data-back]');if(back){back.onclick=()=>{haptic();(routes[back.dataset.back]||defaultBack)()}}}
+  function chapterLabel(n){return ({1:'Naruto Uzumaki Appears',2:'Heading to the Land of Waves',3:'Chunin Exams',4:'Preselection'})[n]||`Shinobi Chapter ${n}`}
+  function teamPower(){return state.team.reduce((s,id)=>{const c=byId(id);return s+c.hp/4+c.atk},0)|0}
+  function statBlock(c){
+    return `<div class="stat-grid">
+      <div class="stat"><span>HP</span><b>${c.hp}</b></div>
+      <div class="stat"><span>Atk</span><b>${c.atk}</b></div>
+      <div class="stat"><span>Def</span><b>${120 + c.role*22}</b></div>
+      <div class="stat"><span>Spd</span><b>${c.speed}</b></div>
+      <div class="stat"><span>Crit</span><b>${Math.round(c.crit*100)}%</b></div>
+      <div class="stat"><span>Link</span><b>${40 + (c.id%70)}</b></div>
+    </div>`
+  }
+  function charStars(c){const r=c.role===1?4:c.role===4?3:c.role===8?2:4;return '★'.repeat(r)+'☆'.repeat(5-r)}
+  function charSkill(c){
+    const kit={1:['Rush','Quickly rush to the enemy and attack from close distance.'],2:['Control','Disturbs the enemy and creates openings for the team.'],4:['Healing Art','Restores HP to the ally with the lowest HP.'],8:['Guardian Wall','Takes reduced damage and protects the front line.']}
+    const [title,desc]=kit[c.role]||['Ninja Art','A balanced shinobi technique.'];
+    return `<div class="skill-box"><h4>${title}</h4><div>${desc}</div></div>`
+  }
+  function resourceStrip(){return `<div class="resource-strip"><div class="energy"><span>⚡ ${state.energy}/120</span><div class="energybar"><i style="width:${clamp(state.energy/120*100,0,100)}%"></i></div></div><div class="chapter-counter">${state.chapter}/20</div></div>`}
+
   function home(){
     battleAbort=true; music('bgm_main.mp3');
-    screen(A('bg/home.jpg'),`${topbar()}${img(A('ui/mini_logo.png'),'home-logo')}<div class="home-actions">
-      ${homeBtn('campaign','ui/btn_campaign.png','Campaña')}
-      ${homeBtn('formation','ui/btn_event_mission.png','Equipo')}
-      ${homeBtn('recovered','ui/btn_arena.png','Recuperada')}
-      ${homeBtn('archive','ui/btn_guild_gate.png','Archivo')}
-      ${homeBtn('settings','ui/btn_settings.png','Ajustes')}
-    </div>`);
+    screen(A('bg/home.jpg'),`${topbar()}<div class="hero-panel"><img class="home-logo-big" src="${A('ui/logo.png')}" draggable="false"><div class="home-shortcuts">
+      <button class="shortcut-card" data-go="campaign">${img(A('ui/btn_campaign.png'))}<div><h3>Journey</h3><p>Continúa la campaña principal y desbloquea capítulos.</p></div></button>
+      <button class="shortcut-card" data-go="formation">${img(A('ui/btn_event_mission.png'))}<div><h3>Growth</h3><p>Gestiona el equipo, consulta atributos y mejora la formación.</p></div></button>
+      <button class="shortcut-card" data-go="challenge">${img(A('ui/btn_arena.png'))}<div><h3>Challenge</h3><p>Prueba el modo Survival Trial y la batalla recuperada de la APK.</p></div></button>
+    </div></div>${navBar('home')}`,'home-screen v06');
     document.querySelectorAll('[data-go]').forEach(b=>b.onclick=()=>{haptic();routes[b.dataset.go]()});
+    bindNav();
   }
-  function homeBtn(go,icon,label){return `<button class="icon-button" data-go="${go}">${img(A(icon))}<span>${label}</span></button>`}
-  function header(title){return `<div class="header"><button class="back" id="back">${img(A('ui/btn_back.png'))}</button><h1>${title}</h1></div>`}
-  function wireBack(fn=home){document.getElementById('back').onclick=()=>{haptic();fn()}}
 
   function campaign(){
     music('bgm_campaign.mp3');
-    const cards=Array.from({length:20},(_,i)=>{const n=i+1,unlocked=n<=state.chapter,stars=state.stars[n]||0;return `<button class="chapter ${unlocked?'':'locked'}" data-ch="${n}" ${unlocked?'':'disabled'}>${img(A(`bg/campaign_map_${n}.jpg`))}<i class="shade"></i><span class="ctxt"><b>Capítulo ${n}</b><span class="stars">${'★'.repeat(stars)}${'☆'.repeat(3-stars)}</span><small>${unlocked?'Entrar en combate':'Bloqueado'}</small></span></button>`}).join('');
-    screen(A('bg/loading.jpg'),`${header('Campaña')}<div class="content"><div class="campaign-list">${cards}</div></div>`);
-    wireBack();
-    document.querySelectorAll('.chapter:not(.locked)').forEach(b=>b.onclick=()=>stage(Number(b.dataset.ch)));
+    const rows=Array.from({length:20},(_,i)=>{const n=i+1, unlocked=n<=state.chapter, stars=state.stars[n]||0; return `<button class="chapter-row ${unlocked?'':'locked'}" data-ch="${n}" ${unlocked?'':'disabled'}>
+      ${img(A(`bg/campaign_map_${n}.jpg`))}<i class="row-shade"></i><div class="chain">⛓</div>
+      <div class="chapter-text"><b>Chapter ${n}</b><span>${chapterLabel(n)}</span></div>
+      <div class="progress-pill"><i style="width:${(stars/3)*100}%"></i></div>
+      <div class="go-arrow">›</div>
+    </button>`}).join('');
+    screen(A('bg/loading.jpg'),`${brownHeader('Journey')}${resourceStrip()}<div class="content"><div class="journey-list">${rows}</div></div>${navBar('campaign')}`,'v06');
+    bindBrownHeader(home); bindNav();
+    document.querySelectorAll('.chapter-row:not(.locked)').forEach(b=>b.onclick=()=>stage(Number(b.dataset.ch)));
   }
 
   function stage(n){
     const bg=A(`bg/battle_${((n-1)%15)+1}.jpg`);
-    screen(bg,`${header(`Capítulo ${n}`)}<div class="content"><div class="panel"><h2 style="margin-top:0">Misión ${n}-1</h2><p>Formación 2×3. El rival aumenta de fuerza en cada capítulo.</p><p><b>Coste:</b> 5 ⚡ &nbsp; <b>Recompensa:</b> ${450+n*80} 🪙</p><div class="formation-grid">${state.team.map((id,i)=>slotHtml(byId(id),i)).join('')}</div><div style="display:flex;gap:8px;margin-top:12px"><button id="edit" class="big-button">Editar equipo</button><button id="fight" class="big-button">Combatir</button></div></div></div>`);
-    wireBack(campaign);
-    document.getElementById('edit').onclick=formation;
+    const c = byId(state.team[0]);
+    screen(bg,`${brownHeader(`Chapter ${n}`,'campaign')}${resourceStrip()}<div class="content"><div class="mission-card">
+      <h2>${chapterLabel(n)}</h2>
+      <p><b>Leader:</b> ${c.name} &nbsp; · &nbsp; <b>Power:</b> ${teamPower()}</p>
+      <p><b>Cost:</b> 5 ⚡ &nbsp; · &nbsp; <b>Reward:</b> ${450+n*80} 🪙</p>
+      <div class="formation-grid">${state.team.map((id,i)=>slotHtml(byId(id),i)).join('')}</div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:12px"><button id="edit" class="btn-soft">Edit Team</button><button id="fight" class="big-gold">Fight</button></div>
+    </div></div>${navBar('campaign')}`,'v06');
+    bindBrownHeader(campaign); bindNav();
+    document.getElementById('edit').onclick=()=>formation(0);
     document.getElementById('fight').onclick=()=>{if(state.energy<5){notice('No tienes energía suficiente');return} state.energy-=5;save();battle(n)};
   }
 
   function slotHtml(c,i){return `<div class="slot"><em>${i+1}</em>${img(A(`chars/${c.id}.png`))}</div>`}
 
-  function formation(){
-    let selected=0;
-    screen(A('bg/home.jpg'),`${header('Formación')}<div class="content formation-wrap"><div class="panel"><p style="margin-top:0">Toca un hueco y luego un ninja para sustituirlo.</p><div id="slots" class="formation-grid">${state.team.map((id,i)=>`<button class="slot ${i===0?'selected':''}" data-slot="${i}"><em>${i+1}</em>${img(A(`chars/${id}.png`))}</button>`).join('')}</div></div><div class="panel"><div id="roster" class="roster">${roster.map(c=>`<button class="card ${state.team.includes(c.id)?'in-team':''}" data-id="${c.id}">${img(A(`chars/${c.id}.png`))}<span class="tag">${c.name}<br>${roleName(c.role)}</span></button>`).join('')}</div></div></div>`);
-    wireBack();
-    const rerenderSlots=()=>{document.getElementById('slots').innerHTML=state.team.map((id,i)=>`<button class="slot ${i===selected?'selected':''}" data-slot="${i}"><em>${i+1}</em>${img(A(`chars/${id}.png`))}</button>`).join('');document.querySelectorAll('[data-slot]').forEach(x=>x.onclick=()=>{selected=Number(x.dataset.slot);rerenderSlots()})};
-    document.querySelectorAll('[data-slot]').forEach(x=>x.onclick=()=>{selected=Number(x.dataset.slot);rerenderSlots()});
-    document.querySelectorAll('.card').forEach(c=>c.onclick=()=>{const id=Number(c.dataset.id);const other=state.team.indexOf(id);if(other>=0&&other!==selected){[state.team[selected],state.team[other]]=[state.team[other],state.team[selected]]}else state.team[selected]=id;save();haptic();formation()});
+  function formation(selected=0){
+    const current=byId(state.team[selected]);
+    const teamHtml=state.team.map((id,i)=>{const c=byId(id);return `<button class="team-slot ${selected===i?'active':''}" data-slot="${i}">${img(A(`chars/${c.id}.png`))}<span class="lv">Lv${state.level+(i>2?0:1)}</span><span class="rolechip"></span></button>`}).join('');
+    const rosterHtml=roster.map(c=>`<button class="card ${state.team.includes(c.id)?'in-team':''} ${c.id===current.id?'active-roster':''}" data-id="${c.id}">${img(A(`chars/${c.id}.png`))}<span class="tag">${c.name}<br>${roleName(c.role)}</span></button>`).join('');
+    screen(A('bg/home.jpg'),`${brownHeader('Team')}
+      <div class="content team-screen">
+        <div class="team-board">
+          <div class="team-grid">${teamHtml}</div>
+          <div class="team-info"><span>${state.team.length}/6</span><span>${state.coins} 🧪</span><span>No Leader Skill</span></div>
+          <div class="team-actions-row"><button id="makeLead" class="btn-soft">Make team leader</button><button id="toGrowth" class="big-gold">Upgrade</button></div>
+        </div>
+        <div class="profile-card">
+          <div class="profile-tabs"><span class="active">Attribute</span><span>Link</span></div>
+          <div class="profile-main"><div class="profile-portrait">${img(A(`chars/${current.id}.png`))}</div><div class="profile-meta"><h3>${current.name}</h3><div>Lv ${state.level}/60 · ${roleName(current.role)}</div><div class="stars">${charStars(current)}</div>${charSkill(current)}</div></div>
+          <div class="equip-grid"><div class="equip-slot">🗡</div><div class="equip-slot">👕</div><div class="equip-slot">💍</div><div class="equip-slot">📜</div></div>
+          ${statBlock(current)}
+        </div>
+        <div class="roster-panel"><div class="roster-title">Change team member</div><div class="roster">${rosterHtml}</div></div>
+      </div>${navBar('formation')}`,'v06');
+    bindBrownHeader(home); bindNav();
+    document.querySelectorAll('[data-slot]').forEach(x=>x.onclick=()=>{haptic();formation(Number(x.dataset.slot))});
+    document.querySelectorAll('.card').forEach(c=>c.onclick=()=>{const id=Number(c.dataset.id);const other=state.team.indexOf(id);if(other>=0&&other!==selected){[state.team[selected],state.team[other]]=[state.team[other],state.team[selected]]}else state.team[selected]=id;save();haptic();formation(selected)});
+    document.getElementById('makeLead').onclick=()=>{if(selected!==0){[state.team[0],state.team[selected]]=[state.team[selected],state.team[0]];save();formation(0)}else notice('Ya es el líder del equipo')};
+    document.getElementById('toGrowth').onclick=()=>growth(selected);
+  }
+
+  function challenge(){
+    music('bgm_campaign.mp3');
+    screen(A('bg/loading.jpg'),`${brownHeader('Survival Trial')}
+      <div class="content"><div class="challenge-board"><div class="survival-map">
+        <div class="map-dots"><svg viewBox="0 0 100 100" preserveAspectRatio="none"><path d="M13 84 L24 71 L31 55 L42 58 L55 44 L70 49 L82 33"></path><circle cx="13" cy="84" r="1.6"></circle><circle cx="24" cy="71" r="1.6"></circle><circle cx="31" cy="55" r="1.6"></circle><circle cx="42" cy="58" r="1.6"></circle><circle cx="55" cy="44" r="1.6"></circle><circle cx="70" cy="49" r="1.6"></circle><circle cx="82" cy="33" r="1.6"></circle></svg></div>
+        <button class="map-node start" style="left:8%;top:72%" data-rec="1">🏁</button>
+        <div class="map-node" style="left:22%;top:58%">?</div>
+        <div class="map-node treasure" style="left:34%;top:46%">🎁</div>
+        <div class="map-node" style="left:48%;top:49%">?</div>
+        <div class="map-node treasure" style="left:63%;top:39%">🧰</div>
+        <div class="map-node" style="left:76%;top:23%">?</div>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:10px"><button id="surviveFight" class="big-gold">Start Teleport</button><button id="recoveredLog" class="btn-soft">Recovered Battle</button></div>
+      </div></div>${navBar('challenge')}`,'v06');
+    bindBrownHeader(home); bindNav();
+    document.getElementById('surviveFight').onclick=()=>battle(Math.max(1,state.chapter));
+    document.getElementById('recoveredLog').onclick=recovered;
+  }
+
+  function growth(slot=0){
+    const c=byId(state.team[slot]);
+    screen(A('bg/home.jpg'),`${brownHeader('Attribute')}
+      <div class="content"><div class="profile-card">
+        <div class="profile-tabs"><span class="active">Attribute</span><span>Link</span></div>
+        <div class="profile-main"><div class="profile-portrait">${img(A(`chars/${c.id}.png`))}</div><div class="profile-meta"><h3>${c.name}</h3><div>Lv ${state.level}/60</div><div>${roleName(c.role)}</div><div class="stars">${charStars(c)}</div>${charSkill(c)}<div class="skill-box"><h4>Way to obtain</h4><div>Journey - Elite ${Math.min(20,state.chapter)}-${(c.id%7)+1}</div></div></div></div>
+        <div class="equip-grid"><div class="equip-slot">⚔</div><div class="equip-slot">🧥</div><div class="equip-slot">💍</div><div class="equip-slot">🐸</div></div>
+        ${statBlock(c)}
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:12px"><button id="equipTeam" class="btn-soft">Equipment</button><button id="backTeam" class="big-gold">Upgrade</button></div>
+      </div></div>${navBar('growth')}`,'v06');
+    bindBrownHeader(formation); bindNav();
+    document.getElementById('equipTeam').onclick=()=>formation(slot);
+    document.getElementById('backTeam').onclick=()=>{state.level=Math.min(60,state.level+1);save();notice('Nivel de la cuenta aumentado');growth(slot)};
   }
 
   function makeEnemy(chapter){
-    const pool=shuffle(roster).slice(0,6); const mult=1+chapter*.15;
-    return pool.map((c,i)=>({...c,hp:Math.round(c.hp*mult*(.92+Math.random()*.16)),atk:Math.round(c.atk*mult),speed:c.speed+chapter*2,crit:Math.min(.3,c.crit+chapter*.004),pos:i+1}));
+    const ids=shuffle(roster).slice(0,3); const mult=1+chapter*.18;
+    return ids.map((c,i)=>({...c,hp:Math.round(c.hp*mult*(.92+Math.random()*.12)),atk:Math.round(c.atk*mult),speed:c.speed+chapter*2,crit:Math.min(.3,c.crit+chapter*.004),pos:i+1}));
   }
   function makePlayer(){return state.team.map((id,i)=>({...byId(id),hp:Math.round(byId(id).hp*(1+state.level*.04)),atk:Math.round(byId(id).atk*(1+state.level*.035)),pos:i+1}))}
   const living=a=>a.filter(x=>x.cur>0);
@@ -162,10 +333,15 @@ const RECOVERED={"battle":{"attacker":{"units":{"1":{"position":1,"side":0,"card
     battleAbort=false;music('bgm_battle.mp3');
     const P=makePlayer().map(x=>({...x,max:x.hp,cur:x.hp})); const E=makeEnemy(chapter).map(x=>({...x,max:x.hp,cur:x.hp}));
     const bg=A(`bg/battle_${((chapter-1)%15)+1}.jpg`);
-    screen(bg,`<div class="battle-hud"><span class="round" id="round">Round: 1/30</span><div class="speedbar"><button data-sp="1">${img(A('ui/btn_battle_x1.png'))}</button><button data-sp="2">${img(A('ui/btn_battle_x2.png'))}</button><button data-sp="3">${img(A('ui/btn_battle_x3.png'))}</button></div></div><div class="battlefield"><div class="side-grid enemy-grid" id="enemy"></div><div class="side-grid" id="player"></div></div>`, 'battle-screen');
-    let sp=state.speed||1;document.querySelectorAll('[data-sp]').forEach(b=>b.onclick=()=>{sp=Number(b.dataset.sp);state.speed=sp;save()});
+    screen(bg,`<div class="battle-top-counters"><div class="battle-pill"><span class="icon">🧰</span><span>${state.gold}</span></div><div class="battle-pill"><span class="icon">💰</span><span>${state.coins}</span></div></div>
+      <div class="battle-side-stack"><button id="quitBattle">↩</button><button class="speed" data-sp="1">x1</button><button class="speed" data-sp="2">x2</button><button class="speed" data-sp="3">x3</button></div>
+      <div class="battle-round-tag" id="round">Round: 1/30</div>
+      <div class="battle-stage"><div class="side-grid enemy-grid" id="enemy"></div><div class="side-grid" id="player"></div></div>`,'battle-screen v06');
+    let sp=state.speed||1;document.querySelectorAll('[data-sp]').forEach(b=>b.onclick=()=>{sp=Number(b.dataset.sp);state.speed=sp;save();document.querySelectorAll('[data-sp]').forEach(x=>x.style.filter=x.dataset.sp==sp?'brightness(1.18)':'none')});
+    document.querySelector(`[data-sp="${sp}"]`)?.style.setProperty('filter','brightness(1.18)');
+    document.getElementById('quitBattle').onclick=()=>{battleAbort=true;campaign()};
     const draw=()=>{drawSide('player',P,'p');drawSide('enemy',E,'e')}; draw();
-    battleBanner('¡COMBATE!'); await sleep(700);
+    battleBanner('COMBAT'); await sleep(700);
     let round=1;
     while(round<=30 && living(P).length && living(E).length && !battleAbort){
       document.getElementById('round').textContent=`Round: ${round}/30`;
@@ -175,29 +351,29 @@ const RECOVERED={"battle":{"attacker":{"units":{"1":{"position":1,"side":0,"card
         const allies=act.side==='p'?P:E, enemies=act.side==='p'?E:P;
         if(!living(enemies).length)break;
         const actorEl=document.querySelector(`[data-f="${act.side}${act.u.pos}"]`);actorEl?.classList.add('attacking');
-        await sleep(90/sp);
+        await sleep(100/sp);
         if(act.u.role===4 && round%3===0){
-          const t=living(allies).sort((a,b)=>a.cur/a.max-b.cur/b.max)[0];const heal=Math.round(act.u.atk*(1.2+Math.random()*.35));t.cur=Math.min(t.max,t.cur+heal);floatText(act.side,t.pos,`+${heal}`,false,true);playSfx('eft_battle_ninja_forward.mp3',.25);
+          const t=living(allies).sort((a,b)=>a.cur/a.max-b.cur/a.max)[0];const heal=Math.round(act.u.atk*(1.2+Math.random()*.35));t.cur=Math.min(t.max,t.cur+heal);floatText(act.side,t.pos,`+${heal}`,false,true);playSfx('eft_battle_ninja_forward.mp3',.25);
         }else{
-          const target=nearest(enemies,act.u.pos); let raw=act.u.atk*(.82+Math.random()*.35); if(round%4===0)raw*=1.45; const crit=Math.random()<act.u.crit; if(crit)raw*=1.55; if(target.role===8)raw*=.82; const dmg=Math.max(1,Math.round(raw));target.cur-=dmg;floatText(act.side==='p'?'e':'p',target.pos,`-${dmg}`,crit,false);flashAt(act.side==='p'?'e':'p',target.pos);playSfx('eft_battle_ninja_forward.mp3',.28);
+          const target=nearest(enemies,act.u.pos); if(!target){actorEl?.classList.remove('attacking');break;} let raw=act.u.atk*(.84+Math.random()*.3); if(round%4===0)raw*=1.42; const crit=Math.random()<act.u.crit; if(crit)raw*=1.55; if(target.role===8)raw*=.82; const dodge=Math.random()<(target.speed/1000); if(dodge){floatText(act.side==='p'?'e':'p',target.pos,'MISS',false,false)} else {const dmg=Math.max(1,Math.round(raw));target.cur-=dmg;floatText(act.side==='p'?'e':'p',target.pos,`-${dmg}`,crit,false);flashAt(act.side==='p'?'e':'p',target.pos);playSfx('eft_battle_ninja_forward.mp3',.28);}
         }
-        actorEl?.classList.remove('attacking');draw();await sleep(210/sp);
+        actorEl?.classList.remove('attacking');draw();await sleep(225/sp);
       }
       round++;
     }
     if(battleAbort)return;
     const won=living(P).length>0 && living(E).length===0;
-    if(won){state.coins+=450+chapter*80;state.xp+=20+chapter*3;if(state.xp>=100){state.level++;state.xp-=100} const survivors=living(P).length;const stars=survivors>=5?3:survivors>=3?2:1;state.stars[chapter]=Math.max(state.stars[chapter]||0,stars);state.chapter=Math.max(state.chapter,Math.min(20,chapter+1));state.energy=Math.min(50,state.energy+1);save();playSfx('battle_win.mp3');}
+    if(won){state.coins+=450+chapter*80;state.xp+=20+chapter*3;if(state.xp>=100){state.level++;state.xp-=100} const survivors=living(P).length;const stars=survivors>=5?3:survivors>=3?2:1;state.stars[chapter]=Math.max(state.stars[chapter]||0,stars);state.chapter=Math.max(state.chapter,Math.min(20,chapter+1));state.energy=Math.min(120,state.energy+1);save();playSfx('battle_win.mp3');}
     else playSfx('battle_lose.mp3');
     await sleep(500);resultOverlay(won,chapter);
   }
 
-  function drawSide(id,arr,prefix){const el=document.getElementById(id);if(!el)return;el.innerHTML=arr.map(u=>`<div class="fighter ${u.cur<=0?'dead':''}" data-f="${prefix}${u.pos}">${img(A(`chars/${u.id}.png`),'sprite')}<div class="hpwrap"><i class="hpbar" style="width:${clamp(u.cur/u.max*100,0,100)}%"></i></div><span class="lvl">${u.name}</span></div>`).join('')}
-  function fighterCenter(side,pos){const e=document.querySelector(`[data-f="${side}${pos}"]`);if(!e)return {x:innerWidth/2,y:innerHeight/2};const r=e.getBoundingClientRect(),g=game.getBoundingClientRect();return{x:r.left+r.width/2-g.left,y:r.top+r.height*.42-g.top}}
+  function drawSide(id,arr,prefix){const el=document.getElementById(id);if(!el)return;el.innerHTML=arr.map(u=>`<div class="fighter side-${prefix} pos${u.pos} ${u.cur<=0?'dead':''}" data-f="${prefix}${u.pos}"><div class="card-inner">${img(A(`chars/${u.id}.png`),'portrait')}<span class="frame-glow"></span><div class="nameplate">${u.name}</div><span class="element"></span><div class="base-hp"><i class="hpbar" style="width:${clamp(u.cur/u.max*100,0,100)}%"></i></div></div></div>`).join('')}
+  function fighterCenter(side,pos){const e=document.querySelector(`[data-f="${side}${pos}"]`);if(!e)return {x:innerWidth/2,y:innerHeight/2};const r=e.getBoundingClientRect(),g=game.getBoundingClientRect();return{x:r.left+r.width/2-g.left,y:r.top+r.height*.45-g.top}}
   function floatText(side,pos,text,crit=false,heal=false){const p=fighterCenter(side,pos),d=document.createElement('div');d.className=`damage ${crit?'crit':''} ${heal?'heal':''}`;d.style.left=p.x+'px';d.style.top=p.y+'px';d.textContent=text;game.appendChild(d);setTimeout(()=>d.remove(),850)}
   function flashAt(side,pos){const p=fighterCenter(side,pos),d=document.createElement('div');d.className='flash';d.style.left=p.x+'px';d.style.top=p.y+'px';game.appendChild(d);setTimeout(()=>d.remove(),430)}
   function battleBanner(t){const d=document.createElement('div');d.className='battle-message';d.textContent=t;game.appendChild(d);setTimeout(()=>d.remove(),1050)}
-  function resultOverlay(won,ch){const d=document.createElement('div');d.className='result';d.innerHTML=`<div class="result-card"><h2>${won?'VICTORIA':'DERROTA'}</h2><p>${won?'Capítulo superado. La partida se ha guardado localmente.':'Puedes cambiar la formación y volver a intentarlo.'}</p>${won?`<div class="reward"><span>🪙 ${450+ch*80}</span><span>⭐ ${state.stars[ch]||1}</span></div>`:''}<button id="resultBack" class="big-button">Volver a campaña</button></div>`;game.appendChild(d);document.getElementById('resultBack').onclick=campaign}
+  function resultOverlay(won,ch){const d=document.createElement('div');d.className='result';d.innerHTML=`<div class="result-card"><h2>${won?'VICTORY':'FAILED'}</h2><p>${won?'Capítulo superado. La partida se ha guardado localmente.':'Puedes cambiar la formación y volver a intentarlo.'}</p>${won?`<div class="reward"><span>🪙 ${450+ch*80}</span><span>⭐ ${state.stars[ch]||1}</span></div>`:''}<button id="resultBack" class="big-gold">Volver a Journey</button></div>`;game.appendChild(d);document.getElementById('resultBack').onclick=campaign}
 
   async function recovered(){
     music('bgm_battle.mp3');
@@ -205,24 +381,30 @@ const RECOVERED={"battle":{"attacker":{"units":{"1":{"position":1,"side":0,"card
     const pObj=B.attacker.units,eObj=B.defender.units;
     const convert=(o)=>Object.values(o).map(u=>({id:u.card_id,name:`ID ${u.card_id}`,role:u.profession,hp:u.hp_max,max:u.hp_max,cur:u.hp_max,pos:u.position,speed:u.speed||100,atk:u.damage}));
     const P=convert(pObj),E=convert(eObj);
-    screen(A('bg/battle_3.jpg'),`<div class="battle-hud"><button class="big-button" id="exitRec">Salir</button><span class="round" id="round">Registro original</span><span class="pill">APK · 24/04/2015</span></div><div class="battlefield"><div class="side-grid enemy-grid" id="enemy"></div><div class="side-grid" id="player"></div></div>`, 'battle-screen');
-    document.getElementById('exitRec').onclick=home;drawSide('player',P,'p');drawSide('enemy',E,'e');battleBanner('BATALLA RECUPERADA');await sleep(850);
+    screen(A('bg/battle_3.jpg'),`<div class="battle-top-counters"><div class="battle-pill"><span class="icon">🎞</span><span>APK 2015</span></div></div><div class="battle-side-stack"><button id="exitRec">↩</button></div><div class="battle-round-tag" id="round">Registro original</div><div class="battle-stage"><div class="side-grid enemy-grid" id="enemy"></div><div class="side-grid" id="player"></div></div>`,'battle-screen v06');
+    document.getElementById('exitRec').onclick=challenge;drawSide('player',P,'p');drawSide('enemy',E,'e');battleBanner('RECOVERED');await sleep(850);
     for(const r of B.log.rounds){document.getElementById('round').textContent=`Round: ${r.round}`;for(const u of r.unitLogs){const side=u.side===0?'p':'e',foe=side==='p'?'e':'p';const actor=document.querySelector(`[data-f="${side}${u.position}"]`);actor?.classList.add('attacking');await sleep(100/(state.speed||1));for(const ef of u.effects||[]){const arr=foe==='p'?P:E,t=arr.find(x=>x.pos===ef.target);if(!t)continue;t.cur=ef.hp_left;floatText(foe,t.pos,ef.is_missed?'MISS':`-${Math.abs(ef.damage||0)}`,!!ef.is_critical,false);flashAt(foe,t.pos)}actor?.classList.remove('attacking');drawSide('player',P,'p');drawSide('enemy',E,'e');await sleep(180/(state.speed||1))}await sleep(220)}
-    const done=document.createElement('div');done.className='result';done.innerHTML=`<div class="result-card"><h2>REGISTRO FINALIZADO</h2><p>Has visto la secuencia recuperada de la APK original. Esta reproducción no modifica tu partida offline.</p><button id="recHome" class="big-button">Volver al inicio</button></div>`;game.appendChild(done);document.getElementById('recHome').onclick=home;
+    const done=document.createElement('div');done.className='result';done.innerHTML=`<div class="result-card"><h2>REGISTRO FINALIZADO</h2><p>Has visto la secuencia recuperada de la APK original. Esta reproducción no modifica tu partida offline.</p><button id="recHome" class="big-gold">Volver</button></div>`;game.appendChild(done);document.getElementById('recHome').onclick=challenge;
   }
 
-  function archive(){
-    screen(A('bg/loading.jpg'),`${header('Archivo recuperado')}<div class="content forensic"><div class="panel"><h2>Reconstrucción</h2><p><b>Motor original:</b> Cocos2d-x. La APK 3.0 contiene 3.612 archivos y un <code>libgame.so</code> ARM nativo. La 1.5 conserva además la traducción española.</p><p><b>Combate:</b> dos matrices 2×3. Se recuperó un registro original con estadísticas y eventos de 5 rondas.</p><p><b>Offline:</b> esta edición no llama a servidores. Progreso, monedas, formación y ajustes se guardan sólo en <code>localStorage</code> del navegador.</p><p><b>Web/PWA:</b> esta edición puede publicarse en cualquier hosting HTTPS estático y abrirse directamente desde Safari, PC u otros navegadores compatibles.</p><button id="rec" class="big-button">Reproducir batalla recuperada</button></div></div>`);wireBack();document.getElementById('rec').onclick=recovered;
-  }
-
-  function settings(){
-    screen(A('bg/home.jpg'),`${header('Ajustes')}<div class="content"><div class="panel settings-grid"><div class="setting-row"><span>Música</span><button id="music" class="toggle ${state.music?'on':''}">${state.music?'ON':'OFF'}</button></div><div class="setting-row"><span>Efectos</span><button id="sfx" class="toggle ${state.sfx?'on':''}">${state.sfx?'ON':'OFF'}</button></div><div class="setting-row"><span>Velocidad de batalla</span><span>x${state.speed||1}</span></div><button id="reset" class="big-button danger">Borrar partida local</button><p style="font-size:11px;opacity:.8">No hay cuentas, anuncios, compras ni conexión con los servidores antiguos.</p></div></div>`);wireBack();
-    document.getElementById('music').onclick=()=>{state.music=!state.music;save();settings();if(state.music)music('bgm_main.mp3');else if(currentMusic){currentMusic.pause();currentMusic=null}};
-    document.getElementById('sfx').onclick=()=>{state.sfx=!state.sfx;save();settings()};
+  function more(){
+    screen(A('bg/loading.jpg'),`${brownHeader('More')}
+      <div class="content more-grid">
+        <div class="more-card"><h3>Archivo recuperado</h3><p>Motor original: Cocos2d-x. La APK 3.0 contiene 3.612 archivos y la 1.5 conserva traducción española y recursos visuales. Esta edición offline ya usa una interfaz mucho más cercana al original.</p><button id="rec" class="big-gold">Reproducir batalla recuperada</button></div>
+        <div class="more-card settings-grid"><div class="setting-row"><span>Música</span><button id="music" class="toggle ${state.music?'on':''}">${state.music?'ON':'OFF'}</button></div><div class="setting-row"><span>Efectos</span><button id="sfx" class="toggle ${state.sfx?'on':''}">${state.sfx?'ON':'OFF'}</button></div><div class="setting-row"><span>Velocidad de batalla</span><span>x${state.speed||1}</span></div><button id="reset" class="big-button danger">Borrar partida local</button></div>
+      </div>${navBar('more')}`,'v06');
+    bindBrownHeader(home); bindNav();
+    document.getElementById('rec').onclick=recovered;
+    document.getElementById('music').onclick=()=>{state.music=!state.music;save();more();if(state.music)music('bgm_main.mp3');else if(currentMusic){currentMusic.pause();currentMusic=null}};
+    document.getElementById('sfx').onclick=()=>{state.sfx=!state.sfx;save();more()};
     document.getElementById('reset').onclick=()=>{if(confirm('¿Borrar todo el progreso de esta edición offline?')){reset();home()}};
   }
 
-  const routes={home,campaign,formation,recovered,archive,settings};
+  function archive(){more()}
+  function settings(){more()}
+
+  const routes={home,campaign,formation,challenge,growth,more,recovered,archive,settings};
+
   if('serviceWorker' in navigator) window.addEventListener('load',()=>navigator.serviceWorker.register('sw.js').catch(()=>{}));
   start();
 })();
